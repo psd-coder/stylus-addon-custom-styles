@@ -1,0 +1,18 @@
+@-moz-document domain("youtube.com") {
+ytd-rich-grid-renderer #contents {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) !important;
+    gap: 30px;
+}
+
+ytd-rich-item-renderer[rendered-from-rich-grid] {
+    width: 100% !important;
+}
+
+ytd-rich-section-renderer,
+ytd-reel-shelf-renderer,
+#secondary,
+ytd-guide-entry-renderer:has([title="Shorts"]){
+    display: none !important;
+}
+}
